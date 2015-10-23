@@ -72,3 +72,4 @@ rm -v ensembl-rest/root/documentation/gacallset.conf
 rm -v ensembl-rest/root/documentation/vep.conf
 rm -v      eg-rest/root/documentation/vep.conf
 rm -v      eg-rest/root/documentation/info.conf
+rm -v      eg-rest/root/documentation/lookup.conf
