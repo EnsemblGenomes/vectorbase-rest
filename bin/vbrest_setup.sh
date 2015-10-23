@@ -33,7 +33,7 @@ done
 
 ## Check out *Ensembl Genomes* code (API, web and (web) tools) from GitHub:
 for repo in \
-    eg-rest
+    eg-rest \
     ensemblgenomes-api;
 do
     if [ ! -d "$repo" ]; then
@@ -55,20 +55,20 @@ done
 ## Dir for starman logs and pid file
 mkdir logs
 
-## VB Configuration
+## Copy VB Configuration
 cp -v vectorbase-rest/ensembl_rest.* ensembl-rest
 cp -rv vectorbase-rest/root/static ensembl-rest/root
 
-## Remove some some endpoints we dont want
-rm -v ../ensembl-rest/root/documentation/vep.conf
-rm -v ../ensembl-rest/root/documentation/compara.conf
-rm -v ../ensembl-rest/root/documentation/overlap.conf
-rm -v ../ensembl-rest/root/documentation/regulatory.conf
-rm -v ../ensembl-rest/root/documentation/taxonomy.conf
-rm -v ../ensembl-rest/root/documentation/variation.conf
-rm -v ../ensembl-rest/root/documentation/gavariant.conf
-rm -v ../ensembl-rest/root/documentation/gavariantset.conf
-rm -v ../ensembl-rest/root/documentation/gacallset.conf
+## Remove Ensembl versions of endpoints we fully override
+rm -v ensembl-rest/root/documentation/overlap.conf
+rm -v ensembl-rest/root/documentation/compara.conf
+rm -v      eg-rest/root/documentation/compara.conf
 
-## ENSEMBL-4134 - fix 'other features example
-sed -i -e 's/species=__VAR(species_common)__/species=__VAR(other_features_species)__/g' ensembl-rest/root/documentation/sequence.conf
+## Remove some endpoints we dont want
+rm -v ensembl-rest/root/documentation/regulatory.conf
+rm -v ensembl-rest/root/documentation/gavariant.conf
+rm -v ensembl-rest/root/documentation/gavariantset.conf
+rm -v ensembl-rest/root/documentation/gacallset.conf
+rm -v ensembl-rest/root/documentation/vep.conf
+rm -v      eg-rest/root/documentation/vep.conf
+rm -v      eg-rest/root/documentation/info.conf
