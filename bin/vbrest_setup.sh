@@ -73,3 +73,9 @@ rm -v ensembl-rest/root/documentation/vep.conf
 rm -v      eg-rest/root/documentation/vep.conf
 rm -v      eg-rest/root/documentation/info.conf
 rm -v      eg-rest/root/documentation/lookup.conf
+
+##/rest prefix
+cp -v vectorbase-rest/root/wrapper.tt ensembl-rest/root/wrapper.tt
+cp -v vectorbase-rest/root/documentation/index.tt ensembl-rest/root/documentation/index.tt
+cp -v vectorbase-rest/root/documentation/info.tt ensembl-rest/root/documentation/info.tt
+##
