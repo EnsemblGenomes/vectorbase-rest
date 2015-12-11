@@ -144,7 +144,7 @@ limitations under the License.
       url : "[% filtered_uri %]",
       type : method,
      beforeSend : function () {
-        $("#example[% p.value.id %]").append("<img src='/static/img/e-loader.gif'>");
+        $("#example[% p.value.id %]").append("<img src='static/img/e-loader.gif'>");
         return true;
      },
       success : function (resp) {
