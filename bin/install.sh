@@ -54,8 +54,8 @@ done
 mkdir logs
 
 ## Copy default VB configs
-cp -vi vectorbase-rest/vectrobase_rest.conf.default vectrobase_rest.conf
-cp -vi vectorbase-rest/bin/env.sh.default env.sh
+cp -vi vectorbase-rest/vectrobase_rest.conf.default vectorbase-rest/vectrobase_rest.conf
+cp -vi vectorbase-rest/bin/env.sh.default           vectorbase-rest/bin/env.sh
 
 ## Copy static files
 cp -rv vectorbase-rest/root/static ensembl-rest/root
@@ -72,6 +72,6 @@ rm -v ensembl-rest/root/documentation/gacallset.conf
 rm -v ensembl-rest/root/documentation/vep.conf
 
 ## Apply /rest prefix
-cp -v vectorbase-rest/root/wrapper.tt ensembl-rest/root/wrapper.tt
+cp -v vectorbase-rest/root/wrapper.tt             ensembl-rest/root/wrapper.tt
 cp -v vectorbase-rest/root/documentation/index.tt ensembl-rest/root/documentation/index.tt
-cp -v vectorbase-rest/root/documentation/info.tt ensembl-rest/root/documentation/info.tt
+cp -v vectorbase-rest/root/documentation/info.tt  ensembl-rest/root/documentation/info.tt

@@ -15,9 +15,9 @@ jsonp=1
 <Model::Registry>
   ###### Database settings. Use if you want to connect to a single database instance. Common options are given below
   
-  host = mysql-eg-vectorbase-archive-prod
-  port = 4367
-  user = ensro
+  host = localhost
+  port = 3306
+  user = ro
  
   version = 82
   
