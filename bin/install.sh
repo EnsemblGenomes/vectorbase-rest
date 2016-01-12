@@ -61,8 +61,9 @@ cp -vi vectorbase-rest/bin/env.sh.default           vectorbase-rest/bin/env.sh
 cp -rv vectorbase-rest/root/static ensembl-rest/root
 
 ## Remove Ensembl versions of endpoints we fully override
-rm -v ensembl-rest/root/documentation/overlap.conf
 rm -v ensembl-rest/root/documentation/compara.conf
+rm -v ensembl-rest/root/documentation/map.conf
+rm -v ensembl-rest/root/documentation/overlap.conf
 
 ## Remove some endpoints we dont want
 rm -v ensembl-rest/root/documentation/regulatory.conf
