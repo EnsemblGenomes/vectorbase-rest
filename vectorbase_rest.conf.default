@@ -129,9 +129,9 @@ jsonp=1
     genetree_stable_id=VBGT00820000045931
     
     asm_species=anopheles_farauti
-    asm_sequence_region=KI915041:6000000-6001000:1
-    from_coord_system=supercontig:AfarF2
-    to_coord_system=supercontig:AfarF1
+    asm_sequence_region=KI915068:100000-100100:1
+    from_coord_system=AfarF2
+    to_coord_system=AfarF1
     
     cdna_coordinates=100..300
     cds_coordinates=1..1000
@@ -146,11 +146,10 @@ jsonp=1
     
     variation_id=2L.2422652
     variation_id_two=2R.57144
-    variation_id_three=WTSI-Ag-GVP-0.1-SNP-2L-83584
-    
-    ld_population_name=KGB reference colony from MR4
-    d_prime=1
-    r2=1
+
+    variation_id_three=2L.2402774
+    ld_population_name=field isolates, Antula, Guinea-Bissau 1993
+    d_prime=0.666121
 
     genomic_alignment_species=anopheles_gambiae
     genomic_alignment_region=2L:2269888-2519887
@@ -174,7 +173,7 @@ jsonp=1
 
 <Controller::Taxonomy>
   # specify the registry alias for the database containing ncbi_taxa_node tables (normally a compara schema)
-  taxonomy = metazoa
+  taxonomy = vb
 </Controller::Taxonomy>
 
 <Controller::Ontology>
