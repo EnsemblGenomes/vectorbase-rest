@@ -54,7 +54,7 @@ done
 mkdir logs
 
 ## Copy default VB configs
-cp -vi vectorbase-rest/vectrobase_rest.conf.default vectorbase-rest/vectrobase_rest.conf
+cp -vi vectorbase-rest/vectorbase_rest.conf.default vectorbase-rest/vectrobase_rest.conf
 cp -vi vectorbase-rest/bin/env.sh.default           vectorbase-rest/bin/env.sh
 
 ## Copy static files
