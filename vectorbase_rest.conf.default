@@ -6,7 +6,7 @@ name = EnsEMBL::REST
 default_view = HTML
 
 service_name = VectorBase REST API
-service_logo = static/img/vectorbase.png
+service_logo = /rest/static/img/vectorbase.png
 service_parent_url = http://www.vectorbase.org
 copyright_footer = <a href='http://www.sanger.ac.uk'>WTSI</a> &amp; <a href='http://www.ebi.ac.uk'>EBI</a>
 
@@ -15,14 +15,9 @@ jsonp=1
 <Model::Registry>
   ###### Database settings. Use if you want to connect to a single database instance. Common options are given below
   
-  host = mysql-eg-prod-vb.ebi.ac.uk
-  port = 4440
+  host = mysql-eg-vectorbase-archive-prod
+  port = 4367
   user = ensro
-
-  lookup_host = mysql-eg-prod-vb.ebi.ac.uk
-  lookup_port = 4440
-  lookup_user = ensro
-  lookup_dbname = vectorbase_info_1512
  
   version = 82
   
@@ -77,7 +72,6 @@ jsonp=1
 <Model::Documentation>
   #Must be an array reference; if you specify only 1 then surround with [] brackets; if you specify more then remove them
   paths=root/documentation
-  paths=../eg-rest/root/documentation
   paths=../vectorbase-rest/root/documentation
 
   #How long examples stay in the backend caches before being expired; default is 1hr in seconds. 
@@ -126,13 +120,13 @@ jsonp=1
     ontology_term_id=GO:0005248
     ontology_term_name=voltage-gated sodium channel activity 
     
-    compara=metazoa
-    compara_method=BLASTZ_NET
+    compara=vb
+    compara_method=LASTZ_NET
     compara_method_type=GenomicAlign
     compara_species_set_1=anopheles_gambiae
     compara_species_set_2=anopheles_farauti
 
-    genetree_stable_id=VBGT00190000009701
+    genetree_stable_id=VBGT00820000045931
     
     asm_species=anopheles_farauti
     asm_sequence_region=KI915041:6000000-6001000:1
@@ -167,10 +161,9 @@ jsonp=1
 </Model::Documentation>
 
 <Controller::Compara>
-  # Sets the default compara to use when finding the best compara fails. Defaults to multi
-  default_compara=vectorbase
+  default_compara=vb
 </Controller::Compara>
-  
+
 <Controller::Archive>
   max_post_size = 1000
 </Controller::Archive>
@@ -204,7 +197,7 @@ jsonp=1
 
 <Controller::Homology>
   # Sets the default compara to use when finding the best compara fails. Defaults to multi
-  default_compara=vectorbase
+  default_compara=vb
 </Controller::Homology>
 
 <!--Controller::Regulatory>
@@ -214,8 +207,13 @@ jsonp=1
 
 <Controller::GenomicAlignment>
   # Sets the default compara to use when finding the best compara fails. Defaults to multi
-  default_compara=vectorbase
+  default_compara=vb
 </Controller::GenomicAlignment>
+
+<Controller::GeneTree>
+  # Sets the default compara to use when finding the best compara fails. Defaults to multi
+  default_compara=vb
+</Controller::GeneTree>
 
 <Controller::VEP>
   # Supply a fasta path for Human in order to allow VEP to work locally

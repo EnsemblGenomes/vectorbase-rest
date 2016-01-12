@@ -5,7 +5,6 @@ ver2=$2
 if [ $ver1 ]; then ENSEMBL_BRANCH="$ver1"; fi
 if [ $ver2 ]; then EG_BRANCH="$ver2"; fi
 
-
 ## Check out *Ensembl* code (API, web and (web) tools) from GitHub:
 for repo in \
     ensembl \
@@ -33,7 +32,6 @@ done
 
 ## Check out *Ensembl Genomes* code (API, web and (web) tools) from GitHub:
 for repo in \
-    eg-rest \
     ensemblgenomes-api;
 do
     if [ ! -d "$repo" ]; then
@@ -55,14 +53,16 @@ done
 ## Dir for starman logs and pid file
 mkdir logs
 
-## Copy VB Configuration
-cp -v vectorbase-rest/ensembl_rest.* ensembl-rest
+## Copy default VB configs
+cp -vi vectorbase-rest/vectrobase_rest.conf.default vectrobase_rest.conf
+cp -vi vectorbase-rest/bin/env.sh.default env.sh
+
+## Copy static files
 cp -rv vectorbase-rest/root/static ensembl-rest/root
 
 ## Remove Ensembl versions of endpoints we fully override
 rm -v ensembl-rest/root/documentation/overlap.conf
 rm -v ensembl-rest/root/documentation/compara.conf
-rm -v      eg-rest/root/documentation/compara.conf
 
 ## Remove some endpoints we dont want
 rm -v ensembl-rest/root/documentation/regulatory.conf
@@ -70,12 +70,8 @@ rm -v ensembl-rest/root/documentation/gavariant.conf
 rm -v ensembl-rest/root/documentation/gavariantset.conf
 rm -v ensembl-rest/root/documentation/gacallset.conf
 rm -v ensembl-rest/root/documentation/vep.conf
-rm -v      eg-rest/root/documentation/vep.conf
-rm -v      eg-rest/root/documentation/info.conf
-rm -v      eg-rest/root/documentation/lookup.conf
 
-##/rest prefix
+## Apply /rest prefix
 cp -v vectorbase-rest/root/wrapper.tt ensembl-rest/root/wrapper.tt
 cp -v vectorbase-rest/root/documentation/index.tt ensembl-rest/root/documentation/index.tt
 cp -v vectorbase-rest/root/documentation/info.tt ensembl-rest/root/documentation/info.tt
-##
