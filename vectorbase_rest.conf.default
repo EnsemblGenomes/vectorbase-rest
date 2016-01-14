@@ -108,7 +108,7 @@ jsonp=1
     contig_coord_system=scaffold
     
     species=anopheles_gambiae
-    species_common=Anopheles gambiae
+    species_common=Anopheles_gambiae
     
     taxon=7165
     taxon_name=Anopheles
@@ -252,3 +252,15 @@ jsonp=1
     global = 1
   </backend>
 </Plugin::Cache>
+
+# add VB static root and give it priority
+<Plugin::Static::Simple>
+  include_path = __path_to(root)__/../../vectorbase-rest/root
+  include_path = __path_to(root)__
+</Plugin::Static::Simple>
+
+# add VB HTML template root and give it priority
+<View::HTML>
+  INCLUDE_PATH = __path_to(root)__/../../vectorbase-rest/root
+  INCLUDE_PATH = __path_to(root)__
+</View::HTML>
