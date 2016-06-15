@@ -200,6 +200,9 @@ limitations under the License.
       </div>
     [% END %]
 
+<!-- hardcode the host for VB -->
+[% p.value.example.host = 'https://www.vectorbase.org/rest' %]
+
 <!-- PERL EXAMPLE -->
 [% INCLUDE documentation/examples/perl.tt %]
 
