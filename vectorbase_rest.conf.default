@@ -19,7 +19,7 @@ jsonp=1
   port = 3306
   user = ro
  
-  version = 82
+  version = 84
   
   # verbose = 0
   
@@ -86,6 +86,7 @@ jsonp=1
     gene_stable_id=AGAP004707
     gene_stable_id_2=AGAP004727
     transcript_stable_id=AGAP004707-RA
+    transcript_stable_id_2=AGAP004707-RA 
     exon_stable_id=AGAP004707-RA-E1
     translation_stable_id=AGAP004707-PA
 
@@ -126,7 +127,7 @@ jsonp=1
     compara_species_set_1=anopheles_gambiae
     compara_species_set_2=anopheles_farauti
 
-    genetree_stable_id=VBGT00820000045931
+    genetree_stable_id=VBGT00190000009701
     
     asm_species=anopheles_farauti
     asm_sequence_region=KI915068:100000-100100:1
@@ -144,10 +145,16 @@ jsonp=1
     variation_region_three=2L:83084-84084
     variation_allele_three=A
     
+    # maybe not needed?
     variation_id=2L.2422652
     variation_id_two=2R.57144
-
     variation_id_three=2L.2402774
+    # replacements for above?
+    variation_id1=rs180291650
+    variation_id2=rs180291673
+    variation_id3=2L.2402774
+
+    ld_sequence_region=2L:2269888-2519887  
     ld_population_name=field isolates, Antula, Guinea-Bissau 1993
     d_prime=0.666121
 
