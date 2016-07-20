@@ -12,5 +12,6 @@ builder {
 ##  
   enable 'DetectExtension';
   enable 'EnsemblRestHeaders';
+  enable 'CrossOrigin', origins => '*', headers => '*', methods => ['GET','POST','OPTIONS'];
   $app;
 }
