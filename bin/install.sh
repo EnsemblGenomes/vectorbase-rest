@@ -63,10 +63,3 @@ cp -vi vectorbase-rest/bin/env.sh.default           vectorbase-rest/bin/env.sh
 rm -v ensembl-rest/root/documentation/compara.conf
 rm -v ensembl-rest/root/documentation/map.conf
 rm -v ensembl-rest/root/documentation/overlap.conf
-
-## Remove some endpoints we dont want
-rm -v ensembl-rest/root/documentation/regulatory.conf
-rm -v ensembl-rest/root/documentation/gavariant.conf
-rm -v ensembl-rest/root/documentation/gavariantset.conf
-rm -v ensembl-rest/root/documentation/gacallset.conf
-rm -v ensembl-rest/root/documentation/vep.conf
