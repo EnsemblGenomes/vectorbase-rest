@@ -157,6 +157,7 @@ jsonp=1
     ld_sequence_region=2L:2269888-2519887  
     ld_population_name=field isolates, Antula, Guinea-Bissau 1993
     d_prime=0.666121
+    window_size=500
 
     genomic_alignment_species=anopheles_gambiae
     genomic_alignment_region=2L:2269888-2519887
