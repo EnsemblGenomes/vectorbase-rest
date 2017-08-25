@@ -167,6 +167,11 @@ jsonp=1
   </replacements>
 </Model::Documentation>
 
+<Model::Variation>
+   use_vcf    = 1
+   vcf_config = /vectorbase/ebi/config/charlie/vcf_json/DEFAULTS_vcf.json
+</Model::Variation>
+
 <Controller::Compara>
   default_compara=vb
 </Controller::Compara>
