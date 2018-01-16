@@ -60,6 +60,11 @@ jsonp=1
   # Set to control internal Ensembl API caching. Turn this off if your application is persistent (internal
   # caches are not shared, will rarely hit and increase your PSGI processes memory footprint)
   no_caching = 1
+
+  # Trigger a preload of the registry the moment the Model::Registry object is contrstructed. Otherwise we
+  # wait until the 1st request for an adaptor comes in. Use in conjunction with pre-fork PSGI deployments
+  # to stop registry reload issues
+  preload = 1
   
 </Model::Registry>
 
@@ -169,11 +174,6 @@ jsonp=1
   </replacements>
 </Model::Documentation>
 
-<Model::Variation>
-   use_vcf    = 1
-   vcf_config = /vectorbase/ebi/config/charlie/vcf_json/DEFAULTS_vcf.json
-</Model::Variation>
-
 <Controller::Compara>
   default_compara=vb
 </Controller::Compara>
@@ -228,6 +228,10 @@ jsonp=1
   # Sets the default compara to use when finding the best compara fails. Defaults to multi
   default_compara=vb
 </Controller::GeneTree>
+
+<Controller::Variaton>
+  max_post_size = 1000
+</Controller::Variaton>
 
 <Controller::VEP>
   # Supply a fasta path for Human in order to allow VEP to work locally
