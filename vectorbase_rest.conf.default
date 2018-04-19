@@ -155,6 +155,8 @@ jsonp=1
     variation_id2=rs180291673
     variation_id3=2L.2402774
     variation_id4=2L.2402774
+    
+    vep_hgvs=2L:g.2422652A>T
 
     ld_sequence_region=2L:2269888-2519887  
     ld_population_name=field isolates, Antula, Guinea-Bissau 1993
