@@ -19,7 +19,7 @@ jsonp=1
   port = 3306
   user = ro
  
-  version = 91
+  version = 92
   
   # verbose = 0
   
