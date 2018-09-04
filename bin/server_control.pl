@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl
+#!/usr/bin/env perl
 
 use strict;
 use warnings;
@@ -7,7 +7,7 @@ use FindBin qw($Bin);
 
 my $root_dir   = $ENV{ENSEMBL_REST_ROOT} || "$Bin/../../";
 my $psgi_file  = "$root_dir/vectorbase-rest/vectorbase_rest.psgi";
-my $starman    = $ENV{ENSEMBL_REST_STARMAN} || '/ensembl/perlbrew/perls/perl-5.16.3/bin/starman';
+my $starman    = $ENV{ENSEMBL_REST_STARMAN} || '/ebi/ensweb-software/perlbrew/perls/perl-5.16.3/bin/starman';
 my $port       = $ENV{ENSEMBL_REST_PORT} || 8030;
 my $workers    = 5;
 my $access_log = "$root_dir/logs/access_log";
