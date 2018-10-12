@@ -19,7 +19,7 @@ jsonp=1
   port = 3306
   user = ensro
  
-  version = 92
+  version = 93
   
   # verbose = 0
   
