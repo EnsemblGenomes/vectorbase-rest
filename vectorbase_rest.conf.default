@@ -281,3 +281,9 @@ jsonp=1
   INCLUDE_PATH = __path_to(root)__/../../vectorbase-rest/root
   INCLUDE_PATH = __path_to(root)__
 </View::HTML>
+
+# precomputed proteomes controller
+<Controller::Proteome>
+  data_sfx = .json
+  data_path = /vectorbase/ebi/pep_json
+</Controller::Proteome>
